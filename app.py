@@ -144,13 +144,11 @@ def render_home():
 
     col1, col2, col3 = st.columns(3)
 
-
     # --------------------------------------------------------
     # AI COMPANION
     # --------------------------------------------------------
 
     with col1:
-
         st.markdown(
             """
             <div class="feature-card">
@@ -161,14 +159,15 @@ def render_home():
             """,
             unsafe_allow_html=True
         )
-
+        if st.button("Open AI Buddy", key="home_card_chat", use_container_width=True):
+            st.session_state.page = "AI Companion"
+            st.rerun()
 
     # --------------------------------------------------------
     # JOURNAL
     # --------------------------------------------------------
 
     with col2:
-
         st.markdown(
             """
             <div class="feature-card">
@@ -179,14 +178,15 @@ def render_home():
             """,
             unsafe_allow_html=True
         )
-
+        if st.button("Open Journal", key="home_card_journal", use_container_width=True):
+            st.session_state.page = "Journal"
+            st.rerun()
 
     # --------------------------------------------------------
     # WELLNESS
     # --------------------------------------------------------
 
     with col3:
-
         st.markdown(
             """
             <div class="feature-card">
@@ -197,6 +197,9 @@ def render_home():
             """,
             unsafe_allow_html=True
         )
+        if st.button("Open Wellness", key="home_card_wellness", use_container_width=True):
+            st.session_state.page = "Wellness"
+            st.rerun()
 
 
 
