@@ -1,0 +1,1 @@
+def summarize_moods(moods):\n    return {"count": len(moods)}\n

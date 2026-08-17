@@ -1,0 +1,11 @@
+from pydantic import BaseModel, Field
+
+class ChatRequest(BaseModel):
+    message: str = Field(..., min_length=1, max_length=4000)
+    user_id: str = "anonymous"
+
+class ChatResponse(BaseModel):
+    response: str
+    emotion: str
+    risk_level: str
+    sources: list[str] = []

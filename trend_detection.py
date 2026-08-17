@@ -1,0 +1,1 @@
+def detect_trend(values):\n    if len(values) < 2: return "insufficient_data"\n    return "increasing" if values[-1] > values[0] else "decreasing_or_stable"\n

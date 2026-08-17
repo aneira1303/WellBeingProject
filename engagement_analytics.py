@@ -1,0 +1,1 @@
+def engagement(sessions):\n    return {"sessions": len(sessions)}\n

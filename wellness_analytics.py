@@ -1,0 +1,1 @@
+def wellness_activity_count(activities):\n    return len(activities)\n

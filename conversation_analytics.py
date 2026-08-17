@@ -1,0 +1,1 @@
+def summarize_conversations(messages):\n    return {"message_count": len(messages)}\n
